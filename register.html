@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<style>
+	body {
+    font-family: Arial, sans-serif;
+    background-image: url("images/image3.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+margin: 0;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+	}
+
+	.card {
+	width: 350px;
+	padding: 25px;
+	border-radius: 15px;
+	
+	/* Glassmorphism */
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+	h3 {
+	    text-align: center;
+	    margin-bottom: 30px;
+	    font-size: 30px;
+	}
+
+	.form-group {
+		margin-bottom: 30px;
+		width: 100%;
+	}
+
+	label {
+	    font-size: 14px;
+	    font-weight: bold;
+	}
+
+	input[type="full name"],
+	input[type="password"],
+	input[type="address"],
+	input[type="date"],
+	input[type="user name"]{
+	    width: 100%;
+	    padding: 10px;
+	    margin-top: 6px;
+	    border: 1px solid black;
+	    border-radius: 6px;
+	    font-size: 15px;
+	    box-sizing: border-box;
+	    box-shadow: 0 9px 15px rgba(0,0,0,0.9);
+	}
+
+	button {
+	    width: 100%;
+	    padding: 12px;
+	    border: none;
+	    background: #0d6efd;
+	    color: white;
+	    border-radius: 6px;
+	    font-size: 16px;
+	    cursor: pointer;
+	    transition: 0.9s ease;
+	}
+
+	button:hover {
+	    background: white;
+	    color: #0d6efd;
+	}
+
+	button:active {
+		background: #0d6efd;
+		color: black;
+	}
+	
+</style>
+<body>
+    <div class="card">
+        <h3>Registration Page</h3>
+
+        <form id="Register Form">
+
+            <div class="form-group">
+                <label>Full name</label>
+                <input type="full name" name="full name" placeholder="Enter your username" required>
+            </div>
+             <div class="form-group">
+                <label>Birthday</label>
+                <input type="date" name="birthday" placeholder="Birthday" required>
+            </div>
+            <div class="form-group">
+                <label>Address</label>
+                <input type="address" name="address" placeholder="Address" required>
+            </div>
+								<div class="form-group">
+									<label>User name</label>
+										<input type="user name" name="user name" placeholder="Username" required>
+							</div>
+							<div class="form-group">
+									<label>Password</label>
+										<input type="password" name="user name" placeholder="Password" required>
+								</div>
+								<div class="form-group">
+									<label>Confirm Password</label>
+										<input type="password" name="user name" placeholder="Confirm Pass" required>
+										</div>
+            <button type="submit" style="margin-bottom: 10px;">Create</button>
+            <a href="index.html">
+            	Login
+            </a>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("Register Form").addEventListener("submit", function(e) {
+            e.preventDefault();
+						
+						let full name = document.querySelector("input[name='full name']").value;
+						let birthday = document.querySelector("input[name='birthday']").value;
+						
+						let address = document.querySelector("input[name='address']").value;
+            let user name = document.querySelector("input[name='user name']").value;
+            
+            
+            alert("Full name:" + full name "\nBirthday: " + birthday + "Adress: " + address "\nUser name:" + username);
+        });
+    </script>
+</body>
+</html>
